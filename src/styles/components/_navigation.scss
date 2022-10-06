@@ -1,0 +1,131 @@
+.sidebar{
+  background-color: $background_color;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  width: 16%;
+  height: calc(100vh - 50px);
+  min-width: 250px;
+  position: fixed;
+  display: grid;
+  grid-template-columns: 1fr;
+  border-radius: 20px;
+  box-shadow: 0 3px 10px #0d1414fa;
+  z-index: 10;
+  margin-top: 20px;
+  margin-left: 120px;
+  grid-template-rows: 250px 1fr 108px;
+  grid-template-areas: 
+  "1"
+  "2"
+  "3";
+
+  .id{
+      grid-area: 1;
+      text-align: center;
+      user-select: none;
+      position: relative;
+
+      .idContent{
+          position: absolute;
+          bottom: 0;
+          left: 50%;
+          transform: translate(-50%);
+          width: 100%;
+
+          img{
+              border-radius: 50%;
+              margin-top: -20px;
+              width: 150px;
+              height: 150px;
+              box-shadow: 0 0 0 2px rgb(56, 63, 63), 0 0 0 4px black ;
+          }
+
+          h3{
+              margin-top: 1.5rem;
+              color:$text_color;
+          }
+          
+      }
+  }
+
+  .navigation{
+      grid-area: 2;
+      padding: 2rem 1rem;
+
+      ul{
+          display: grid;
+
+          li{
+              padding: 1rem 0 1rem .4rem;
+              font-size: 1.1rem;
+              color: $text_color;
+              text-decoration: none;
+              margin-left: 20px;
+              margin-bottom: 30px;
+
+              &:hover i{
+                  transform: translate(3px, 3px);
+              }
+
+              a{
+                  color: $text_color;
+                  display: none;
+                  margin-right: 20px;
+              }
+
+              i{
+                  position: absolute;
+                  font-size: 0.95rem;
+                  transform: translateY(3px);
+                  transition: .2s ease-in-out;
+              }
+
+              .nav-active{
+                  color: rgb(34, 34, 46);
+                }
+              
+          }
+      }
+  }
+
+  .socialNetwork{
+      grid-area: 3;
+
+      ul{
+          display: flex;
+          padding: 0 14px;
+          justify-content: space-between;
+          margin-left: 10px;
+
+          li{
+              font-size: 1.5rem;
+
+              a{
+                  color: $text_color;
+
+                  &:hover{
+                      color: rgb(57, 66, 73);
+                      transition: .2s ease-in-out;
+                  }
+              }
+          }
+      }
+  }
+
+  @media screen and (max-width: 550px){
+      .sidebar{
+          display: flex;
+          min-height: 50px;
+          margin-bottom: .2rem;
+
+          .id, .socialNetwork{
+              display: none;
+          }
+
+          .navigation{
+              width: 100%;
+              padding: 1rem 1rem;
+          }
+      }
+      
+  }
+}

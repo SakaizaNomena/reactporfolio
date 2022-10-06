@@ -1,0 +1,40 @@
+@font-face {
+  font-family: "font-1";
+  src: url(../assets/fonts/JosefinSans-Medium.ttf);
+}
+
+$font-1: "font-1", sans-serif;
+
+$color-1: #61dafb;
+$color-2: salmon;
+$color-3: #282c34;
+$white: #f3f3f3;
+$background_color: #e1e4d2;
+$text_color: #04020a;
+$text_color_home:#021d24;
+
+@mixin verticalCenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: $white;
+  font-family: $font-1;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  // background-image: url("./../assets/img/1-3d-render-of-spotlights-on-a-grunge-brick-wall.jpg.webp");
+  background-size: cover;
+  background-attachment: fixed;
+}
+li {
+  list-style-type: none;
+}
+
+

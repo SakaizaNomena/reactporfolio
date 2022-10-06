@@ -1,0 +1,123 @@
+.home{
+    // background-color: #bad3da;
+    // height: 100%;
+
+    .header{
+        // background-color: #021d24;
+        font-family: Monotype Corsiva;
+        color: white;
+        height: 15vh;
+
+        .page_title{
+            text-align: center;
+            padding-top: 40px;
+            font-size: 57px;
+        }
+    }
+
+    .home-intro{
+        position: static;
+        margin-left: 450px;
+        margin-top: 40px;
+
+        h2{
+            display: contents;
+
+            .titleOne{
+                font-size: 4rem;
+                animation-name: moveRight;
+                animation-duration:1.5s;
+                color: text_color_home;
+                font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            }
+            .titleTwo{
+                font-size: 3rem;
+                animation-name: moveLeft;
+                animation-duration:2s;
+                color: text_color_home;
+                margin-top: 30px;
+                font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            }
+            .titleThree{
+                font-size: 3rem;
+                animation-name: moveRight;
+                animation-duration:1.5s;
+                color: text_color_home;
+                margin-top: 30px;
+                font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            }
+            @keyframes moveRight {
+                0%{
+                    opacity: 0;
+                    transform: translateX(100px);
+                }
+                100%{
+                    opacity: 1;
+                    transform: translate(0);
+                }
+            }
+            @keyframes moveLeft {
+                0%{
+                    opacity: 0;
+                    transform: translateX(-50px);
+                }
+                100%{
+                    opacity: 1;
+                    transform: translate(0);
+                }
+            }
+        }   
+    }
+
+   .home-skills{
+        position: static;
+        margin-left: 450px;
+        animation-name: slowanimate;
+        animation-duration:2s;
+
+        .download{
+            font-size: 50px;
+            display: flex;
+            position: static;
+            align-items: center;
+            margin: 40px 0 25px;
+            margin-top: 150px;
+
+            .download-btn{
+                width: 200px;
+                height: 40px;
+                cursor: pointer;
+            }
+        }
+        .download::before, .download::after{
+            content: "";
+            height: 3px;
+            border-radius: 5px;
+            width: 200px;
+        }
+        .download::before{
+            margin-right: 20px;
+            margin-left: 2px;
+            background: linear-gradient(to right, transparent, #1a1703);
+        }
+        .download::after{
+            margin-left: 20px;
+            margin-right: 2px;
+            background: linear-gradient(to left, transparent, #0c0b02);
+        }
+        @keyframes slowanimate {
+            0%{
+                opacity: 0;
+            }
+            25%{
+                opacity: 0.1;
+            }
+            50%{
+                opacity: 0.2;
+            }
+            100%{
+                opacity: 1;
+            }
+        }
+    }
+}
